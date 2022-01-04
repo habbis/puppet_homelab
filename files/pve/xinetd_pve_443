@@ -1,0 +1,12 @@
+service https
+{
+        port = 443
+        bind = ::
+        socket_type = stream
+        protocol = tcp
+        user = root
+        redirect = 127.0.0.1 8006
+        type = UNLISTED
+        wait = no
+	per_source      = 100
+}

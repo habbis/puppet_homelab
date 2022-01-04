@@ -1,0 +1,4 @@
+##
+# File under puppet control
+##
+%admins ALL=(ALL) NOPASSWD:ALL
