@@ -50,6 +50,11 @@ Remove user from linux .
 of puppet classes to setup a server with my basic setup
 
 
+Points to all the puppet classes that is in server_lite folder.
+
+[server_lite.pp](https://github.com/habbis/puppet_homelab/blob/master/manifests/server_lite.pp) 
+
+
 list of server_lite puppet classes.
 
 Setup proxy for apt.
