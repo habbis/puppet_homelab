@@ -1,4 +1,4 @@
-class puppet_homelab::server_lite::sshkeys (
+class puppet_homelab::sshkeys (
   $puppet_homelab_sshkeys_ssh_authorized_keys = puppet_homelab_sshkeys_ssh_authorized_keys) {
   if $kernel == "Linux" {
     file { '/root/.ssh/authorized_keys':
