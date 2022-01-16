@@ -6,7 +6,6 @@ class puppet_homelab::server_lite {
   include puppet_homelab::server_lite::hosts
   include puppet_homelab::server_lite::locate
   include puppet_homelab::server_lite::motd
-  include puppet_homelab::server_lite::sshd
   include puppet_homelab::server_lite::sshkeys
   include puppet_homelab::server_lite::sudo_group
   include puppet_homelab::server_lite::cron::puppet_restart

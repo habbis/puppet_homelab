@@ -1,7 +1,7 @@
 # Class to install nrpe on debian and ubuntu
-class puppet_homelab::server_lite::sshd::debian inherits puppet_homelab::server_lite::sshd {
+class puppet_homelab::sshd::rhel inherits puppet_homelab::sshd {
 
-  package {
+package {
     'openssh-server':       ensure => installed;
   }
 
@@ -17,7 +17,7 @@ class puppet_homelab::server_lite::sshd::debian inherits puppet_homelab::server_
      owner  => root,
      group  => root,
      mode   => '0644',
-     source => 'puppet:///modules/puppet_homelab/sshd/debian/sshd_config'
+     source => 'puppet:///modules/puppet_homelab/sshd/rhel/sshd_config'
   }
 
   exec {
@@ -26,3 +26,4 @@ class puppet_homelab::server_lite::sshd::debian inherits puppet_homelab::server_
       refreshonly => true;
   }
 }
+
