@@ -23,6 +23,8 @@ class puppet_homelab::server_lite::packages {
     # RedHat 8 bruker ikke screen men tmux
     #'screen':    ensure => installed;
     'strace':    ensure => installed;
+    'ethtool':    ensure => installed;
+    'bpftrace':    ensure => installed;
     'tcpdump':   ensure => installed;
     'bc':      	 ensure => installed;
   }
