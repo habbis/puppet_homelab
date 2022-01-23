@@ -27,6 +27,7 @@ class puppet_homelab::server_lite::packages {
     'bpftrace':    ensure => installed;
     'tcpdump':   ensure => installed;
     'bc':      	 ensure => installed;
+    'python3':   ensure => installed;
   }
 
   

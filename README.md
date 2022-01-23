@@ -19,9 +19,6 @@ to this path path.
 puppet classes. 
 
 
-Setup proxmox 7 .
-
-[pve](https://github.com/habbis/puppet_homelab/tree/master/manifests/pve)
 
 Setup container user for docker and lxd and manage sshkeys for that user.
 
@@ -61,6 +58,12 @@ Setup proxy for apt.
 
 [apt_proxy](https://github.com/habbis/puppet_homelab/tree/master/manifests/server_lite/apt_proxy)
 [apt_proxy.pp](https://github.com/habbis/puppet_homelab/blob/master/manifests/server_lite/apt_proxy.pp)
+
+
+Setup epel repo  rhel based distro.
+
+[apt_proxy](https://github.com/habbis/puppet_homelab/tree/master/manifests/server_lite/epel_repo.pp)
+[apt_proxy.pp](https://github.com/habbis/puppet_homelab/blob/master/manifests/server_lite/epel_repo.pp)
 
 Deploy cronjob.
 
