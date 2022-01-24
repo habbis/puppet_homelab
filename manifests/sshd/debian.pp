@@ -9,7 +9,8 @@ class puppet_homelab::sshd::debian inherits puppet_homelab::sshd {
     'ssh':
       require     => Package['openssh-server'],
       ensure      => running,
-      hasstatus   => false,
+      enable      => true,
+      hasstatus   => true,
       hasrestart  => true;
   }
 
@@ -20,9 +21,12 @@ class puppet_homelab::sshd::debian inherits puppet_homelab::sshd {
      source => 'puppet:///modules/puppet_homelab/sshd/debian/sshd_config'
   }
 
+
   exec {
     'ssh_restart':
       command     => '/etc/init.d/ssh restart',
       refreshonly => true;
   }
+
+
 }

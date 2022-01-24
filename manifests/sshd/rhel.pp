@@ -9,7 +9,8 @@ package {
     'ssh':
       require     => Package['openssh-server'],
       ensure      => running,
-      hasstatus   => false,
+      enable      => true,
+      hasstatus   => true,
       hasrestart  => true;
   }
 
@@ -19,6 +20,7 @@ package {
      mode   => '0644',
      source => 'puppet:///modules/puppet_homelab/sshd/rhel/sshd_config'
   }
+
 
   exec {
     'ssh_restart':

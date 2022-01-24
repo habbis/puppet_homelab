@@ -4,6 +4,7 @@ class puppet_homelab::squid {
   user { 'squid':
     ensure      => present,
     shell       => '/bin/sh',
+    #shell       => '/usr/sbin/nologin',
     managehome  => true,
     gid         => 'squid',
   }
@@ -15,6 +16,8 @@ class puppet_homelab::squid {
   package { 
     'squid':  ensure => installed;
     }
+
+
 
   file { '/var/spool/squid':
     ensure => directory,
@@ -28,7 +31,7 @@ class puppet_homelab::squid {
     ensure => directory,
     owner  => 'squid',
     group  => 'squid',
-    mode   => '0640',
+    mode   => '0770',
 
   }
 
@@ -53,7 +56,7 @@ class puppet_homelab::squid {
   file { '/etc/squid/global/domain.txt':
      owner  => 'squid',
      group  => 'squid',
-     mode   => '0644',
+     mode   => '0770',
      source => 'puppet:///modules/puppet_homelab/squid/domain.txt'
   }
 
@@ -73,11 +76,27 @@ class puppet_homelab::squid {
      source => 'puppet:///modules/puppet_homelab/logrotate/squid'
   }
 
+
+  exec {
+    'squid_permission':
+     path        => ['/bin'],
+     command     => 'chown -R squid:squid /var/log/squid && chmod -R 0770 /var/log/squid && chown -R squid:squid /var/spool/squid',
+   }
+
+
+  exec {
+    'squid_enable':
+     path        => ['/bin'],
+     command     => 'systemctl enable squid',
+     refreshonly => true;
+  }
+
   exec {
     'squid_restart':
      path        => ['/bin'],
      command     => 'systemctl restart squid',
      refreshonly => true;
   }
+
 
 }
