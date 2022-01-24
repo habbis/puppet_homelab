@@ -1,0 +1,20 @@
+##
+# managed by puppet
+##
+#.microsoft.com
+#.windowsupdate.com
+#.vmware.com
+.oracle.com
+yum.oracle.com
+.debian.org
+.jenkins.io
+.puppetlabs.com
+.fedoraproject.org
+.centos.org
+.docker.com
+.canonical.com
+.ubuntu.com
+.archive.ubuntu.com
+.postgresql.org
+.habbestad.org
+.habbfarm.net
