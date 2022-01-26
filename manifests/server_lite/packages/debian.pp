@@ -19,4 +19,12 @@ class puppet_homelab::server_lite::packages::debian {
     }
   }
 
+ # CVE-2021-4034
+   if ! defined(Package['policykit-1']) {
+    package { "policykit-1":
+      ensure => "latest",
+    }
+  }
+
+
 }

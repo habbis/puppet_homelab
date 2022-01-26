@@ -13,6 +13,13 @@ class puppet_homelab::server_lite::packages::redhat {
 
     }
   }
+   # CVE-2021-4034
+   if ! defined(Package['polkit']) {
+    package { "polkit":
+      ensure => "latest",
+    }
+  }
+
   
 
   if $operatingsystemrelease =~ /^7.*/ {
