@@ -4,7 +4,6 @@ class puppet_homelab::ntp_server {
 
   package { 
     'chrony':  ensure => installed;
-    'ntpstat':  ensure => absent;
     }
 
 
