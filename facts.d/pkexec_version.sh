@@ -8,4 +8,4 @@ if [ -z "${version}" ]; then
 	version="none"
 fi
 
-echo "ncop_pkexec_version=$version"
+echo "pkexec_version=$version"
