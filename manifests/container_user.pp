@@ -16,10 +16,14 @@ class puppet_homelab::container_user {
     file { '/home/cusr/.ssh/authorized_keys':
       ensure  => file,
       backup  => false,
+      owner  =>  cusr,
+      group  =>  cusr,
       content => template("habbfarm/sshkeys/authorized_keys.erb"),
     }
     file { '/home/cusr/.ssh':
       ensure  => directory,
+      owner  =>  cusr,
+      group  =>  cusr,
       mode    => '0700';
     }
   }
