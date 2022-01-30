@@ -16,7 +16,7 @@ class puppet_homelab::git_user {
     file { '/home/gituser/.ssh/authorized_keys':
       ensure  => file,
       backup  => false,
-      content => template("habbfarm/sshkeys/authorized_keys.erb"),
+      content => template("puppet_homelab/sshkeys/authorized_keys.erb"),
     }
     file { '/home/gituser/.ssh':
       ensure  => 'directory',

@@ -18,7 +18,7 @@ class puppet_homelab::container_user {
       backup  => false,
       owner  =>  cusr,
       group  =>  cusr,
-      content => template("habbfarm/sshkeys/authorized_keys.erb"),
+      content => template("puppet_homelab/sshkeys/authorized_keys.erb"),
     }
     file { '/home/cusr/.ssh':
       ensure  => directory,
