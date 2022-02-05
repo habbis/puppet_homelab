@@ -27,6 +27,4 @@ class puppet_homelab::sshd::debian inherits puppet_homelab::sshd {
       command     => '/etc/init.d/ssh restart',
       refreshonly => true;
   }
-
-
 }

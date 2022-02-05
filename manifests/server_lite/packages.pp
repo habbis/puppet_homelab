@@ -20,6 +20,7 @@ class puppet_homelab::server_lite::packages {
     'less':      ensure => installed;
     'curl':      ensure => installed;
     'rsync':     ensure => installed;
+    'git':     ensure => installed;
     # RedHat 8 bruker ikke screen men tmux
     #'screen':    ensure => installed;
     'strace':    ensure => installed;
