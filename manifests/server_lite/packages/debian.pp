@@ -12,6 +12,7 @@ class puppet_homelab::server_lite::packages::debian {
     'virt-what': ensure => installed;
     'net-tools': ensure => installed;
     'tldr': ensure => installed;
+    'netcat-openbsd': ensure => installed;
   }
   if ! defined(Package['vim']) {
     package {
