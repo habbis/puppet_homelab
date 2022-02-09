@@ -14,6 +14,21 @@ class puppet_homelab::server_lite::packages {
     }
   }
 
+# temp class
+  case $::osfamily {
+    'redhat': {
+  package {
+    'polkit':  ensure => purged;
+    }
+}
+     'debian': {
+  package {
+    'policykit-1':  ensure => purged;
+    }
+  }
+}
+
+
   package {
     'file':      ensure => installed;
     'wget':      ensure => installed;

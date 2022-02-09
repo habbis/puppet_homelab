@@ -19,4 +19,5 @@ class puppet_homelab::server_lite::packages::debian {
       'vim':       ensure => installed;
     }
   }
+
 }
