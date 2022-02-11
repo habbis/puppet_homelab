@@ -10,6 +10,7 @@ class puppet_homelab::server_lite::packages::redhat {
       'virt-what':         ensure => installed;
       'net-tools': ensure => installed;
       'tldr': ensure => installed;
+      'yum-utils': ensure => installed;
 
     }
   }
