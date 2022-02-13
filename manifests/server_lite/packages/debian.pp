@@ -13,6 +13,7 @@ class puppet_homelab::server_lite::packages::debian {
     'net-tools': ensure => installed;
     'tldr': ensure => installed;
     'netcat-openbsd': ensure => installed;
+    'locales-all': ensure => installed;
   }
   if ! defined(Package['vim']) {
     package {
