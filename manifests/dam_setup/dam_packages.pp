@@ -1,21 +1,16 @@
 # Class for my dan server
 class puppet_homelab::dam_setup::dam_packages {
-  
-  #case $::osfamily {
-  #  'Debian': { include puppet_homelab::server_lite::packages::debian }
-  #  'RedHat': { include puppet_homelab::server_lite::packages::redhat }
-  #}
 
 
   case $::osfamily {
-    'Debian': {  
+    'Debian': {
 
-     file { '/etc/apt/trusted.gpg.d/terraform_gpg':
-     owner  => root,
-     group  => root,
-     mode   => '0644',
-     source => 'puppet:///modules/puppet_homelab/apt_gpg/terraform_gpt'
-     }
+    file { '/etc/apt/trusted.gpg.d/terraform_gpg':
+    owner  => root,
+    group  => root,
+    mode   => '0644',
+    source => 'puppet:///modules/puppet_homelab/apt_gpg/terraform_gpt'
+    }
 
     apt::source { 'terraform_repo':
     comment  => 'repo for terraform',
@@ -25,14 +20,14 @@ class puppet_homelab::dam_setup::dam_packages {
     };
 
   }
-    'Ubuntu': {  
+    'Ubuntu': {
 
-     file { '/etc/apt/trusted.gpg.d/terraform_gpg':
-     owner  => root,
-     group  => root,
-     mode   => '0644',
-     source => 'puppet:///modules/puppet_homelab/apt_gpg/terraform_gpt'
-     }
+    file { '/etc/apt/trusted.gpg.d/terraform_gpg':
+    owner  => root,
+    group  => root,
+    mode   => '0644',
+    source => 'puppet:///modules/puppet_homelab/apt_gpg/terraform_gpt'
+    }
 
     apt::source { 'terraform_repo':
     comment  => 'This repo contains terraform',
@@ -43,27 +38,27 @@ class puppet_homelab::dam_setup::dam_packages {
 
   }
 
-    'RedHat': {  
+    'RedHat': {
 
-     exec {
+    exec {
     'yum_terraform_repo':
-     path        => ['/bin','/usr/bin', '/usr/sbin'],
-     command     => 'yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo',
+    path        => ['/bin','/usr/bin', '/usr/sbin'],
+    command     => 'yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo',
 
   }
- }
+}
 }
 
 
   case $::osfamily {
-    'Debian': {  
+    'Debian': {
 
-     file { '/etc/apt/trusted.gpg.d/packer_gpg':
-     owner  => root,
-     group  => root,
-     mode   => '0644',
-     source => 'puppet:///modules/puppet_homelab/apt_gpg/packer_gpt'
-     }
+    file { '/etc/apt/trusted.gpg.d/packer_gpg':
+    owner  => root,
+    group  => root,
+    mode   => '0644',
+    source => 'puppet:///modules/puppet_homelab/apt_gpg/packer_gpt'
+    }
 
     apt::source { 'terraform_repo':
     comment  => 'repo for packer',
@@ -73,14 +68,14 @@ class puppet_homelab::dam_setup::dam_packages {
     };
 
   }
-    'Ubuntu': {  
+    'Ubuntu': {
 
-     file { '/etc/apt/trusted.gpg.d/packer_gpg':
-     owner  => root,
-     group  => root,
-     mode   => '0644',
-     source => 'puppet:///modules/puppet_homelab/apt_gpg/packer_gpt'
-     }
+    file { '/etc/apt/trusted.gpg.d/packer_gpg':
+    owner  => root,
+    group  => root,
+    mode   => '0644',
+    source => 'puppet:///modules/puppet_homelab/apt_gpg/packer_gpt'
+    }
 
     apt::source { 'packer_repo':
     comment  => 'repo for packer',
@@ -91,15 +86,15 @@ class puppet_homelab::dam_setup::dam_packages {
 
   }
 
-    'RedHat': {  
+    'RedHat': {
 
-     exec {
+    exec {
     'yum_terraform_repo':
-     path        => ['/bin','/usr/bin', '/usr/sbin'],
-     command     => 'yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo',
+    path        => ['/bin','/usr/bin', '/usr/sbin'],
+    command     => 'yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo',
 
   }
- }
+}
 }
 
 
