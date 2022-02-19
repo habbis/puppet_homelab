@@ -99,14 +99,14 @@ class puppet_homelab::dam_setup::dam_packages {
 
 
   package {
-    'terraform':      ensure => installed;
+    'terraform':   ensure => installed;
     'packer':      ensure => installed;
   }
 
 
-  package {
-    'ansible':      ensure => installed;
-    provider  ==>  'pip3',
+  package { 'ansible':
+    provider  =>  ['pip3'],
+    ensure => installed;
   }
 
 }
