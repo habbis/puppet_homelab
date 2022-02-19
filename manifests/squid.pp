@@ -57,6 +57,7 @@ class puppet_homelab::squid {
      owner  => 'squid',
      group  => 'squid',
      mode   => '0770',
+     ensure => present,
      source => 'puppet:///modules/puppet_homelab/squid/domain.txt'
   }
 
