@@ -60,7 +60,7 @@ class puppet_homelab::dam_setup::dam_packages {
     source => 'puppet:///modules/puppet_homelab/apt_gpg/packer_gpt'
     }
 
-    apt::source { 'terraform_repo':
+    apt::source { 'packer_repo':
     comment  => 'repo for packer',
     location => 'https://apt.releases.hashicorp.com',
     release  => 'bullseye',
