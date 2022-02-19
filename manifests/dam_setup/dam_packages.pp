@@ -9,6 +9,7 @@ class puppet_homelab::dam_setup::dam_packages {
     owner  => root,
     group  => root,
     mode   => '0644',
+    ensure => present,
     source => 'puppet:///modules/puppet_homelab/apt_gpg/terraform_gpt'
     }
 
@@ -26,6 +27,7 @@ class puppet_homelab::dam_setup::dam_packages {
     owner  => root,
     group  => root,
     mode   => '0644',
+    ensure => present,
     source => 'puppet:///modules/puppet_homelab/apt_gpg/terraform_gpt'
     }
 
@@ -57,6 +59,7 @@ class puppet_homelab::dam_setup::dam_packages {
     owner  => root,
     group  => root,
     mode   => '0644',
+    ensure => present,
     source => 'puppet:///modules/puppet_homelab/apt_gpg/packer_gpt'
     }
 
@@ -74,6 +77,7 @@ class puppet_homelab::dam_setup::dam_packages {
     owner  => root,
     group  => root,
     mode   => '0644',
+    ensure => present,
     source => 'puppet:///modules/puppet_homelab/apt_gpg/packer_gpt'
     }
 
