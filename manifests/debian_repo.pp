@@ -6,8 +6,9 @@ class puppet_homelab::debian_repo {
      owner  => root,
      group  => root,
      mode   => '0644',
+     ensure => present,
      source => 'puppet:///modules/puppet_homelab/repo/debian/sources.list'
    }
   }
- }
+}
 }
