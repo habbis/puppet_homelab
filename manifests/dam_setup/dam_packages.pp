@@ -5,12 +5,12 @@ class puppet_homelab::dam_setup::dam_packages {
   case $::osfamily {
     'Debian': {
 
-    file { '/etc/apt/trusted.gpg.d/terraform_gpg':
+    file { '/etc/apt/trusted.gpg.d/terraform.gpg':
     owner  => root,
     group  => root,
     mode   => '0644',
     ensure => present,
-    source => 'puppet:///modules/puppet_homelab/apt_gpg/terraform_gpt'
+    source => 'puppet:///modules/puppet_homelab/apt_gpg/terraform.gpt'
     }
 
     apt::source { 'terraform_repo':
@@ -23,12 +23,12 @@ class puppet_homelab::dam_setup::dam_packages {
   }
     'Ubuntu': {
 
-    file { '/etc/apt/trusted.gpg.d/terraform_gpg':
+    file { '/etc/apt/trusted.gpg.d/terraform.gpg':
     owner  => root,
     group  => root,
     mode   => '0640',
     ensure => present,
-    source => 'puppet:///modules/puppet_homelab/apt_gpg/terraform_gpt'
+    source => 'puppet:///modules/puppet_homelab/apt_gpg/terraform.gpt'
     }
 
     apt::source { 'terraform_repo':
@@ -55,12 +55,12 @@ class puppet_homelab::dam_setup::dam_packages {
   case $::osfamily {
     'Debian': {
 
-    file { '/etc/apt/trusted.gpg.d/packer_gpg':
+    file { '/etc/apt/trusted.gpg.d/packer.gpg':
     owner  => root,
     group  => root,
     mode   => '0640',
     ensure => present,
-    source => 'puppet:///modules/puppet_homelab/apt_gpg/packer_gpt'
+    source => 'puppet:///modules/puppet_homelab/apt_gpg/packer.gpt'
     }
 
     apt::source { 'packer_repo':
@@ -73,12 +73,12 @@ class puppet_homelab::dam_setup::dam_packages {
   }
     'Ubuntu': {
 
-    file { '/etc/apt/trusted.gpg.d/packer_gpg':
+    file { '/etc/apt/trusted.gpg.d/packer.gpg':
     owner  => root,
     group  => root,
     mode   => '0640',
     ensure => present,
-    source => 'puppet:///modules/puppet_homelab/apt_gpg/packer_gpt'
+    source => 'puppet:///modules/puppet_homelab/apt_gpg/packer.gpt'
     }
 
     apt::source { 'packer_repo':
