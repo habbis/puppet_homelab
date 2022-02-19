@@ -14,6 +14,7 @@ class puppet_homelab::ntp_server {
      owner  => root,
      group  => root,
      mode   => '0644',
+     ensure => present,
      source => 'puppet:///modules/puppet_homelab/chrony/redhat/server/chrony.conf'
   }
 }
@@ -22,6 +23,7 @@ class puppet_homelab::ntp_server {
      owner  => root,
      group  => root,
      mode   => '0644',
+     ensure => present,
      source => 'puppet:///modules/puppet_homelab/chrony/debian/server/chrony.conf'
   }
  }

@@ -12,6 +12,7 @@ file { '/etc/resolv.conf':
      owner  => root,
      group  => root,
      mode   => '0644',
+     ensure => present,
      source => 'puppet:///modules/puppet_homelab/resolv_conf/resolv.conf'
   }
 }

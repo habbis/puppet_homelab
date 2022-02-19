@@ -24,6 +24,7 @@ class puppet_homelab::squid {
     owner  => 'squid',
     group  => 'squid',
     mode   => '0750',
+    ensure => present,
 
   }
 
@@ -32,6 +33,7 @@ class puppet_homelab::squid {
     owner  => 'squid',
     group  => 'squid',
     mode   => '0770',
+    ensure => present,
 
   }
 
@@ -41,6 +43,7 @@ class puppet_homelab::squid {
     owner  => 'squid',
     group  => 'squid',
     mode   => '0750',
+    ensure => present,
 
   }
 
@@ -49,6 +52,7 @@ class puppet_homelab::squid {
     owner  => 'squid',
     group  => 'squid',
     mode   => '0750',
+    ensure => present,
 
   }
 
@@ -65,6 +69,7 @@ class puppet_homelab::squid {
      owner  => squid,
      group  => squid,
      mode   => '0640',
+     ensure => present,
      source => 'puppet:///modules/puppet_homelab/squid/squid.conf'
   }
 
@@ -73,6 +78,7 @@ class puppet_homelab::squid {
      owner  => root,
      group  => root,
      mode   => '0644',
+     ensure => present,
      source => 'puppet:///modules/puppet_homelab/logrotate/squid'
   }
 
