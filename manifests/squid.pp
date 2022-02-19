@@ -24,7 +24,6 @@ class puppet_homelab::squid {
     owner  => 'squid',
     group  => 'squid',
     mode   => '0750',
-    ensure => present,
 
   }
 
@@ -33,7 +32,6 @@ class puppet_homelab::squid {
     owner  => 'squid',
     group  => 'squid',
     mode   => '0770',
-    ensure => present,
 
   }
 
@@ -43,7 +41,6 @@ class puppet_homelab::squid {
     owner  => 'squid',
     group  => 'squid',
     mode   => '0750',
-    ensure => present,
 
   }
 
@@ -52,7 +49,6 @@ class puppet_homelab::squid {
     owner  => 'squid',
     group  => 'squid',
     mode   => '0750',
-    ensure => present,
 
   }
 
