@@ -17,7 +17,7 @@ class puppet_homelab::dam_setup::dam_packages {
     location => 'https://apt.releases.hashicorp.com',
     release  => 'bullseye',
     repos    => 'terraform',
-    };
+    }
 
   }
     'Ubuntu': {
@@ -34,7 +34,7 @@ class puppet_homelab::dam_setup::dam_packages {
     location => 'https://apt.releases.hashicorp.com',
     release  => 'focal',
     repos    => 'terraform',
-    };
+    }
 
   }
 
@@ -65,7 +65,7 @@ class puppet_homelab::dam_setup::dam_packages {
     location => 'https://apt.releases.hashicorp.com',
     release  => 'bullseye',
     repos    => 'packer',
-    };
+    }
 
   }
     'Ubuntu': {
@@ -82,7 +82,7 @@ class puppet_homelab::dam_setup::dam_packages {
     location => 'https://apt.releases.hashicorp.com',
     release  => 'focal',
     repos    => 'packer',
-    };
+    }
 
   }
 
