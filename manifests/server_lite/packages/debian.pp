@@ -14,6 +14,7 @@ class puppet_homelab::server_lite::packages::debian {
     'tldr': ensure => installed;
     'netcat-openbsd': ensure => installed;
     'locales-all': ensure => installed;
+    'psmisc': ensure => installed;
   }
   if ! defined(Package['vim']) {
     package {
