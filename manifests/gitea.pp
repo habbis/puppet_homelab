@@ -1,13 +1,21 @@
 # Class for installing gitea on linux
-class puppet_homelab::gitea ($gitea_version) {
+class puppet_homelab::gitea (
+  # having probles with variables
+  $gitea_version = '1.16.2',) {
+
+    validate_string($gitea_version)
 
 
-  exec {
-    'gitea_download':
-     path        => ['/bin','/usr/bin', '/usr/sbin'],
-     command     => 'wget -O gitea http://mirror.habbfarm.net/repository/binary_and_tar_files/gitea/gitea-1.16.0-linux-amd64 ; mv gitea /usr/local/bin/',
-     unless      => 'test -e /usr/local/bin/gitea',
-   }
+  
+  file { '/usr/local/bin/gitea':
+    ensure => present,
+    #owner  => 'git',
+    #group  => 'git',
+    #mode   => '0750',
+    source  => 'http://mirror.habbfarm.net/repository/binary_and_tar_files/gitea/gitea-1.16.2-linux-amd64'
+
+  }
+  
 
 
   exec {
