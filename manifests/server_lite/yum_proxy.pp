@@ -2,6 +2,7 @@
 class puppet_homelab::server_lite::yum_proxy {
   case $::operatingsystem {
     /^(RedHat)$/:{ include puppet_homelab::yum_proxy::config }
+    /^(Rocky)$/:{ include puppet_homelab::yum_proxy::config }
     /^(Debian|Ubuntu)$/:{ }
     default: {
       fail("Module ${module_name} is not supported on ${::operatingsystem}")
