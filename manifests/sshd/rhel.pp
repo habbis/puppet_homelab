@@ -6,7 +6,7 @@ package {
   }
 
   service {
-    'ssh':
+    'sshd':
       require     => Package['openssh-server'],
       ensure      => running,
       enable      => true,
