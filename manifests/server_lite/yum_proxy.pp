@@ -16,3 +16,4 @@ if $::osfamily == 'RedHat' {
   #  $nfs_client = 'nfs-common'
   #}
 }
+}
