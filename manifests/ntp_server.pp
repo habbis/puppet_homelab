@@ -30,6 +30,18 @@ class puppet_homelab::ntp_server {
 }
 
 
+case $::osfamily {
+    'redhat': {
+  service {
+    'chronyd':
+      require     => Package['chrony'],
+      ensure      => running,
+      enable      => true,
+      hasstatus   => true,
+      hasrestart  => true;
+    }
+  }
+    'debian': {
   service {
     'chrony':
       require     => Package['chrony'],
@@ -37,6 +49,8 @@ class puppet_homelab::ntp_server {
       enable      => true,
       hasstatus   => true,
       hasrestart  => true;
+    }
   }
-
 }
+}
+
