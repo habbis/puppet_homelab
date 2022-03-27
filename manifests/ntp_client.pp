@@ -33,7 +33,7 @@ case $::osfamily {
     'redhat': {
   service {
     'chronyd':
-      require     => Package['chronyd'],
+      require     => Package['chrony'],
       ensure      => running,
       enable      => true,
       hasstatus   => true,
