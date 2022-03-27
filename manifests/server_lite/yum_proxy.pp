@@ -1,7 +1,7 @@
 # Class to add yum-proxy if the operatingsystem supports it.
 class puppet_homelab::server_lite::yum_proxy {
   case $::operatingsystem {
-    /^(RedHat|RockyLinux)$/:{ include puppet_homelab::yum_proxy::config }
+    /^(RedHat|CentOS)$/:{ include puppet_homelab::yum_proxy::config }
     /^(Debian|Ubuntu)$/:{ }
     default: {
       fail("Module ${module_name} is not supported on ${::operatingsystem}")
