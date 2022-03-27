@@ -7,7 +7,7 @@ class puppet_homelab::server_lite::bash_profile::rhel inherits puppet_homelab::s
      mode   => '0644',
      source => 'puppet:///modules/puppet_homelab/bash_profile/rhel/profile'
   }
-  file { '/etc/profile.d/colorls.sh'':
+  file { '/etc/profile.d/colorls.sh':
      owner  => root,
      group  => root,
      mode   => '0644',
