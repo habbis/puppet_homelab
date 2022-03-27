@@ -7,7 +7,7 @@ class puppet_homelab::server_lite::bash_profile {
       case $::operatingsystem {
         'Debian': {
           include puppet_homelab::server_lite::bash_profile::debian
-          $osfamily = "Debian"
+          $osfamily = 'Debian'
         }
       }
     }
