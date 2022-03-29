@@ -13,7 +13,7 @@ else
         file_unprivileged_userns_clone_exist="false"
 fi
 
-echo "habbfarm_kernel_unprivileged_userns_clone=$file_unprivileged_userns_clone_exist"
+echo "habbfarm_unprivileged_userns_clone_exist=$file_unprivileged_userns_clone_exist"
 
 if test -e $unprivileged_bpf_disabled
 then
@@ -22,8 +22,6 @@ else
         file_unprivileged_bpf_disabled_exist="false"
 fi
 
-echo "habbfarm_kernel_unprivileged_bpf_disabled=$file_unprivileged_bpf_disabled_exist"
-
-
+echo "habbfarm_unprivileged_bpf_disabled_exist=$file_unprivileged_bpf_disabled_exist"
 
 echo "habbfarm_unprivileged_userns_clone_disable_enabled=$(cat $unprivileged_userns_clone)"
