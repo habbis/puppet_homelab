@@ -26,4 +26,4 @@ echo "habbfarm_kernel_unprivileged_bpf_disabled=$file_unprivileged_bpf_disabled_
 
 
 
-echo "habbfarm_kernel_unprivileged_userns_clone_disable_enabled=$(cat $unprivileged_userns_clone)"
+echo "habbfarm_unprivileged_userns_clone_disable_enabled=$(cat $unprivileged_userns_clone)"
