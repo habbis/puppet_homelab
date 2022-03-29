@@ -2,6 +2,7 @@
 
 export PATH=$PATH:/opt/puppetlabs/bin
 
+# fact for https://ubuntu.com/security/CVE-2022-25636
 unprivileged_userns_clone="/proc/sys/kernel/unprivileged_userns_clone"
 unprivileged_bpf_disabled="/proc/sys/kernel/unprivileged_bpf_disabled"
 
