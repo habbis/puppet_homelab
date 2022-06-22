@@ -11,7 +11,7 @@ class puppet_homelab::manage_ca_cert {
     }
    exec {
     'import_ca_rhel':
-     path        => ['/usr/bin'],
+     path        => ['/usr/bin', '/usr/sbin'],
      command     => 'update-ca-trust',
      subscribe   => File['/etc/pki/ca-trust/snakeoil.crt'],
      refreshonly => true;
@@ -26,9 +26,9 @@ class puppet_homelab::manage_ca_cert {
     }
   exec {
     'import_ca_debian':
-     path        => ['/usr/sbin'],
+     path        => ['/usr/bin', '/usr/sbin'],
      command     => 'update-ca-certificates',
-     subscribe   => File['/usr/local/share/ca-certificates/ncop-rootca-p01.crt'],
+     subscribe   => File['/usr/local/share/ca-certificates/snakeoil.crt'],
      refreshonly => true;
   }
   }
