@@ -13,7 +13,7 @@ class puppet_homelab::manage_ca_cert {
     'import_ca_rhel':
      path        => ['/usr/bin', '/usr/sbin'],
      command     => 'update-ca-trust',
-     subscribe   => File['/etc/pki/ca-trust/snakeoil.crt'],
+     subscribe   => File['/etc/pki/ca-trust/source/anchors/snakeoil.crt'],
      refreshonly => true;
   }
 }
